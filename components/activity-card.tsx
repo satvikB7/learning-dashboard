@@ -4,7 +4,7 @@ import {motion} from "framer-motion";
 
 const itemVariants = {hidden: {opacity: 0, y:14}, show: {opacity: 1, y: 0}, };
 
-const spring ={type: "spring", stiffness: 300, damping: 20, };
+const spring ={type: "spring" as const, stiffness: 300, damping: 20, };
 
 const cells=Array.from({length: 42}, (_, i) => i%3 === 0 || i%7 === 0 ? 1 : 0);
 
